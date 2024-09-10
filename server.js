@@ -31,13 +31,10 @@ app.use("/api/v1/admin", require("./routes/adminRoutes"));
 //Static folder
 app.use(express.static(path.join(__dirname, "./client/build")));
 
-//static routes
-app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+
 
 //port
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 
 //listen
 app.listen(PORT, () => {
