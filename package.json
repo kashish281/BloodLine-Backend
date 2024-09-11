@@ -8,7 +8,7 @@
     "server": "nodemon server.js",
     "client": "cd client && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "echo \"No build step required\""
+    "build": "npm install && npm run build --prefix client"
   },
   "author": "kashish",
   "license": "ISC",
